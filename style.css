@@ -44,9 +44,9 @@
 .Player{
     height:calc(13% - 16px);
 }
-span{
+.UpperSide span{
     color: rgb(179, 166, 166);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 750;
     padding-top: 1px;
     margin-left: 18px;
@@ -81,4 +81,98 @@ i{
     i{
         color:white;
     }
+}
+.LibraryHead{
+    height: 20%;
+}
+.LibraryContent{
+    overflow-y: auto;
+    height: 80%;
+}
+.LibraryHead .Expanded{
+    /* background-color: aqua; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.LibraryHead .Shrink{
+    display: none;
+    background-color: aliceblue;
+    height:100%;
+}
+.LibraryHead .Expanded .Upper{
+    /* background-color: azure; */
+    height: 50%;
+    padding-left:20px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.LibraryHead .Expanded .Upper .left{
+    /* background-color: blue; */
+    width: 45%;
+    height: 70%;
+    display: flex;
+    align-items:center;
+}
+.LibraryHead .Expanded .Upper .left span{
+    color: rgb(179, 166, 166);
+    /* background-color: red; */
+    font-size: 15px;
+    font-weight: 750;
+    margin-left: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.LibraryHead .Expanded .Upper .left svg path{
+    fill:rgb(179, 166, 166);
+}
+.LibraryHead .Expanded .Upper .left:hover{
+    span{
+        color: white;
+    }
+    path{
+        fill: white;
+    }
+    cursor: pointer;
+}
+.LibraryHead .Expanded .Upper .right{
+    /* background-color: blue; */
+    width: 22%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.LibraryHead .Expanded .Upper .right svg path{
+    fill:rgb(179, 166, 166);
+}
+.LibraryHead .Expanded .Upper .right svg:hover{
+    path{
+        fill: white;
+    }
+    border-radius: 50%;
+    background-color: rgb(33,33,33);
+    cursor: pointer;
+}
+.LibraryHead .Expanded .Lower{
+    height: 50%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding-left: 17px;
+    gap: 10px;
+}
+.LibraryHead .Expanded .Lower span{
+    background-color: rgb(40,40,40);
+    padding: 5px 11px 9px 13px;
+    color: white;
+    font-size: 14px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 30px;
+    font-weight: 550;
+}
+.LibraryHead .Expanded .Lower span:hover{
+    background-color: rgb(48,48,48);
+    cursor: pointer;
 }
