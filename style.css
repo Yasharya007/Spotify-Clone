@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .page{
     background-color:rgb(0, 0, 0);
@@ -14,15 +15,15 @@
     display: flex;
 }
 .SideBar{
-    width: 27.6%;
+    width: 23.2%;
     display: flex;
     flex-direction: column;
     gap:8px;
 }
 .UpperSide{
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(16, 16, 16);
     border-radius: 8px;
-    height: 17.5%;
+    height: 26.5%;
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
@@ -30,14 +31,14 @@
     justify-content: space-evenly;
 }
 .LowerSide{
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(16, 16, 16);
     border-radius: 8px;
-    height: calc( 82.5% - 8px );
+    height: calc( 83.5% - 8px );
     overflow-y: auto;
 }
 .Main{
-    background-color: rgb(22, 22, 22);
-    width:calc(100% - 27.6% - 8px);
+    background-color: rgb(16, 16, 16);
+    width:calc(100% - 23.2% - 8px);
     border-radius: 8px;
     overflow-y: auto;
 }
@@ -50,7 +51,10 @@
     font-weight: 750;
     padding-top: 1px;
     margin-left: 18px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.UpperSide .logo svg{
+    margin-left: 3px;
+    fill: white;
 }
 i{
     color: rgb(179, 166, 166);
@@ -59,6 +63,12 @@ i{
 .Home{
     display: flex;
     align-items: center;
+    span{
+        color: white;
+    }
+    .homelogo{
+        stroke: white;
+    }
 }
 .Home:hover{
     cursor: pointer;
@@ -83,11 +93,21 @@ i{
     }
 }
 .LibraryHead{
-    height: 20%;
+    height: 12%;
+    /* border-bottom:3px solid rgb(22, 22, 22) ;
+    box-shadow:0px 4px 5px rgb(18, 17, 17); */
+    position: relative;
 }
 .LibraryContent{
-    overflow-y: auto;
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    height: 46%;
+}
+.footer{
+    height: 33%;
+    padding-top: 33px;
+    padding-left: 23px;
 }
 .LibraryHead .Expanded{
     /* background-color: aqua; */
@@ -102,7 +122,7 @@ i{
 }
 .LibraryHead .Expanded .Upper{
     /* background-color: azure; */
-    height: 50%;
+    height: 100%;
     padding-left:20px;
     padding-right: 15px;
     display: flex;
@@ -117,15 +137,14 @@ i{
     align-items:center;
 }
 .LibraryHead .Expanded .Upper .left span{
-    color: rgb(179, 166, 166);
+    color: rgb(166, 166, 166);
     /* background-color: red; */
     font-size: 15px;
     font-weight: 750;
     margin-left: 10px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .LibraryHead .Expanded .Upper .left svg path{
-    fill:rgb(179, 166, 166);
+    fill:rgb(166, 166, 166);
 }
 .LibraryHead .Expanded .Upper .left:hover{
     span{
@@ -138,14 +157,14 @@ i{
 }
 .LibraryHead .Expanded .Upper .right{
     /* background-color: blue; */
-    width: 22%;
+    /* width: 22%; */
     height: 70%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 .LibraryHead .Expanded .Upper .right svg path{
-    fill:rgb(179, 166, 166);
+    fill:rgb(166, 166, 166);
 }
 .LibraryHead .Expanded .Upper .right svg:hover{
     path{
@@ -158,21 +177,117 @@ i{
 .LibraryHead .Expanded .Lower{
     height: 50%;
     /* background-color: red; */
-    display: flex;
+    /* display: flex; */
     align-items: center;
     padding-left: 17px;
     gap: 10px;
+    display: none;
 }
 .LibraryHead .Expanded .Lower span{
     background-color: rgb(40,40,40);
     padding: 5px 11px 9px 13px;
     color: white;
     font-size: 14px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 30px;
     font-weight: 550;
 }
 .LibraryHead .Expanded .Lower span:hover{
     background-color: rgb(48,48,48);
     cursor: pointer;
+}
+.arrow{
+    display: none;
+}
+.LibraryContent .Upper{
+    display: none;
+}
+.InitialLibrary-Card{
+    height: 120px;
+    margin: 8px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    background-color:#242424;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 14px;
+    gap: 9px;
+}
+::-webkit-scrollbar {
+    display: none;
+    width: 16px;
+  }
+::-webkit-scrollbar-track {
+    background: rgb(22, 22, 22); 
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+  }
+.LibraryContent:hover{
+    overflow-y:scroll;
+  }
+  .InitialLibrary-Card .h1{
+    /* background-color: red; */
+    font-size: 16px;
+    font-weight: 750;
+    color: white;
+  }
+  .InitialLibrary-Card span:hover{
+    cursor:context-menu;
+  }
+.InitialLibrary-Card .txt{
+    color: white;
+    font-size: 13.5px;
+    font-weight: 750;
+  }
+  .InitialLibrary-Card button{
+    margin-top:13px ;
+    font-size: 14.5px;
+    width:fit-content;
+    border-radius: 28px;
+    font-weight: 600;
+    padding: 5px 17px 7px 16px;
+    border: none;
+  }  
+  .InitialLibrary-Card button:hover{
+    cursor: pointer;
+    padding: 7px 20px 9px 19px;
+    margin-top: 11px;
+  }
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+.footer span{
+    color: rgb(166, 166, 166);
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 17px;
+}
+.footer .language{
+    border-radius: 28px;
+    padding:5px 0px 7px 13px;
+    border: 1px solid grey;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+}
+.language span{
+    font-size:14px;
+    color: white;
+    font-weight: 700;
+}
+.footer span:hover{
+    cursor: pointer;
+}
+.footer button:hover{
+    cursor: pointer;
+    margin-top: -1px;
+    padding:6px 1px 8px 14px;
+    border:1px solid white;
 }
