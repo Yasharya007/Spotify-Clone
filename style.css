@@ -291,3 +291,58 @@ i{
     padding:6px 1px 8px 14px;
     border:1px solid white;
 }
+
+/* Main Content */
+/* Upperbar */
+.Main .Upper{
+    display: flex;
+    background-color: hsla(0,0%,0%,.3);
+    height: 64px;
+    justify-content: space-between;
+}
+.Main .Upper .arrows{
+    display: flex;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.Main .Upper .arrows svg{
+    border-radius: 50%;
+    background-color:rgba(0,0,0,.7);
+}
+.Main .Upper .login-signup{
+    width: 200px;
+    margin-right: 22px;
+    display: flex;
+    align-items: center;
+}
+.Main .Upper .login-signup .login{
+    width: 110px;
+    height: fit-content;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    border-radius: 28px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+.Main .Upper .login-signup .login:hover{
+    padding-top: 14px;
+    padding-bottom: 16px;
+    font-weight: 700;
+}
+.Main .Upper .login-signup .signup{
+    width: 88px;
+    font-size: 15px;
+    padding-right: 23px;
+    padding-bottom: 3px;
+    font-weight: 700;
+    border: none;
+    background-color:transparent;
+    color: rgb(179, 166, 166);
+}
+.Main .Upper .login-signup .signup:hover{
+    color: white;
+    font-size: 16.2px;
+}
