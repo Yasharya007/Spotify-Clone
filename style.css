@@ -21,7 +21,7 @@
     gap:8px;
 }
 .UpperSide{
-    background-color: rgb(16, 16, 16);
+    background-color: rgb(18, 18, 18);
     border-radius: 8px;
     height: 26.5%;
     display: flex;
@@ -31,13 +31,13 @@
     justify-content: space-evenly;
 }
 .LowerSide{
-    background-color: rgb(16, 16, 16);
+    background-color: rgb(18, 18, 18);
     border-radius: 8px;
     height: calc( 83.5% - 8px );
     overflow-y: auto;
 }
 .Main{
-    background-color: rgb(16, 16, 16);
+    background-color: rgb(18, 18, 18);
     width:calc(100% - 23.2% - 8px);
     border-radius: 8px;
     overflow-y: auto;
@@ -260,13 +260,13 @@ i{
     gap: 8px;
     margin-bottom: 30px;
 }
-.footer span{
+.SideBar .LowerSide .footer span{
     color: rgb(166, 166, 166);
     font-size: 11px;
     font-weight: 600;
     margin-right: 17px;
 }
-.footer .language{
+.SideBar .LowerSide .footer .language{
     border-radius: 28px;
     padding:5px 0px 7px 13px;
     border: 1px solid grey;
@@ -277,15 +277,15 @@ i{
     display: flex;
     gap: 5px;
 }
-.language span{
+.SideBar .LowerSide .language span{
     font-size:14px;
-    color: white;
+    color:white;
     font-weight: 700;
 }
-.footer span:hover{
+.SideBar .LowerSide .footer span:hover{
     cursor: pointer;
 }
-.footer button:hover{
+.SideBar .LowerSide .footer button:hover{
     cursor: pointer;
     margin-top: -1px;
     padding:6px 1px 8px 14px;
@@ -299,6 +299,10 @@ i{
     background-color: hsla(0,0%,0%,.3);
     height: 64px;
     justify-content: space-between;
+    border-radius: 8px;
+    position: fixed;
+    right:8px;
+    left:calc(23.2% + 12px);
 }
 .Main .Upper .arrows{
     display: flex;
@@ -310,6 +314,9 @@ i{
 .Main .Upper .arrows svg{
     border-radius: 50%;
     background-color:rgba(0,0,0,.7);
+}
+.Main .Upper .arrows svg:hover{
+    cursor: not-allowed;
 }
 .Main .Upper .login-signup{
     width: 200px;
@@ -331,6 +338,7 @@ i{
     padding-top: 14px;
     padding-bottom: 16px;
     font-weight: 700;
+    cursor: pointer;
 }
 .Main .Upper .login-signup .signup{
     width: 88px;
@@ -345,4 +353,138 @@ i{
 .Main .Upper .login-signup .signup:hover{
     color: white;
     font-size: 16.2px;
+    cursor: pointer;
+}
+.Main-Content .overlapped{
+    height: 64px;
+}
+.Main-Content .header{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+.Main-Content .header .one{
+    font-size: 22px;
+    margin-top: 2px;
+    color: white;
+    font-weight: 750;
+}
+.Main-Content .header span:hover{
+    text-decoration:underline;
+    cursor: pointer;
+}
+.Main-Content .header .two{
+    color: rgb(179, 166, 166);
+    font-weight: 650;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.Main-Content .cardpage{
+    width: 97%;
+    /* background-color: red; */
+    display: flex;
+    padding-left: 25px;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.cardpage .card{
+    background-color:  #181818;
+    height:18.5vw;
+    width:13vw;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 15px; */
+    /* justify-content:space-around; */
+}
+.cardpage .card:hover{
+    background-color: #292929;
+    cursor: pointer;
+}
+.card .card-content{
+    width: 86%;
+    height: 88%;
+    margin-top: calc(9vw - 90/200 * 18vw);
+    /* background-color: #242424; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card img{
+    width:100%;
+    border-radius: 8px;
+}
+.card .discribe{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+}
+.card .discribe .one{
+    color: white;
+    font-weight: 700;
+}
+.card .discribe .two{
+    margin-top: 3px;
+    font-size: 14.1px;
+    font-weight: 600;
+    color: rgb(179, 166, 166);
+}
+.main-footer{
+    margin-top: 100px;
+}
+.main-footer .part-one{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.main-footer .part-one .left{
+    display: flex;
+    /* background-color: green; */
+    gap: 135px;
+}
+.main-footer .part-one .right{
+    padding-top: 5px;
+    display: flex;
+    /* background-color: #43858f; */
+    gap: 15px;
+}
+.main-footer .part-one .right svg{
+    fill: white;
+    margin-top: 11px;
+}
+.main-footer .part-one .right .svgholder{
+    background-color: #292929;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+.main-footer .part-one .right .svgholder:hover{
+    background-color: #9fcbd376;
+    cursor: pointer;
+}
+.main-footer .part-one .left .line{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main-footer .part-one .left .line .head{
+    color: white;
+    font-weight: 700;
+}
+.main-footer .part-one .left .line span{
+    color: rgb(179, 166, 166);
+    font-weight: 600;
+}
+.main-footer .part-one .left .line .lnks:hover{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
 }
