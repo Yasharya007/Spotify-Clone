@@ -68,7 +68,7 @@
 
 i {
     color: rgb(179, 166, 166);
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .Home {
@@ -78,10 +78,6 @@ i {
     span {
         color: white;
     }
-
-    .homelogo {
-        stroke: white;
-    }
 }
 
 .Home:hover {
@@ -89,10 +85,6 @@ i {
 
     span {
         color: white;
-    }
-
-    .homelogo {
-        stroke: white;
     }
 }
 
@@ -578,9 +570,9 @@ i {
     cursor: pointer;
 }
 
-.main-footer .part-two{
+.main-footer .part-two {
     border-top: 1px solid rgb(51, 48, 48);
-    margin:30px;
+    margin: 30px;
     margin-top: 40px;
     margin-bottom: 70px;
     padding-top: 40px;
