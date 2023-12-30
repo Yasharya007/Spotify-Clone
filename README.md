@@ -1,1 +1,1 @@
-It is a clone of spotify Created By Yash ARYA.
+It is a clone of spotify Created By Yash Arya.
