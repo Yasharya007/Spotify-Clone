@@ -468,10 +468,16 @@ i {
 }
 
 .cardpage .card:hover {
-    background-color: #292929;
+    /* background-color: #292929; */
     cursor: pointer;
+    animation-name: cardanime;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 }
-
+@keyframes cardanime {
+    from{background-color: #181818;}
+    to{background-color:#292929 ;}
+}
 .card .card-content {
     width: 86%;
     height: 88%;
