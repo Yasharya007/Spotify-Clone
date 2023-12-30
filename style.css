@@ -473,11 +473,36 @@ i {
     animation-name: cardanime;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+
+    .playbutton {
+        animation-name: buttonup;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+    }
 }
+
 @keyframes cardanime {
-    from{background-color: #181818;}
-    to{background-color:#292929 ;}
+    from {
+        background-color: #181818;
+    }
+
+    to {
+        background-color: #292929;
+    }
 }
+
+@keyframes buttonup {
+    from {
+        bottom: 0px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+
 .card .card-content {
     width: 86%;
     height: 88%;
@@ -486,11 +511,38 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+}
+
+.card .img-button {
+    position: relative;
 }
 
 .card img {
     width: 100%;
     border-radius: 8px;
+}
+
+.playbutton {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 12px;
+    text-align: center; */
+    background-color: #1ed760;
+    border-radius: 50%;
+    bottom: 0px;
+    right: 8px;
+    opacity: 0;
+}
+
+.playbutton:hover {
+    border: 1px solid #1ed760;
+    right: 7px;
+    top: calc(100% - 59px);
 }
 
 .card .discribe {
